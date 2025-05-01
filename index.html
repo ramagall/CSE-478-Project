@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gaming Sales Dashboard</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Gaming Sales Dashboard</h1>
+  <label className="yearSelector" for="year">Select Year:</label>
+        <select id="year"></select>
+  <div class="dashboard">
+    <div class="viz" id="barViz">
+        <h2>Best-Selling Genres by Region</h2>
+
+        <label for="region">Select Region:</label>
+        <select id="region">
+            <option value="NA_Sales">North America</option>
+            <option value="EU_Sales">Europe</option>
+            <option value="JP_Sales">Japan</option>
+            <option value="Global_Sales">Global Sales</option>
+        </select>
+
+        <svg id="barChart" width="1400" height="500"></svg>
+    </div>
+    <div class="viz" id="lineViz">
+        <h2>Percent of Total Game sales by Region</h2>
+        <svg id="pieChart" width="1400" height="500"></svg>
+    </div>
+    <div class="viz" id="scatterViz">
+      <h3>Total Sales Per region over Time</h3>
+      <svg id="lineChart" width="1200" height="500"></svg>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
